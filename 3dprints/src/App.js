@@ -1,42 +1,38 @@
+import CategoryItem from "./components/category-item/category-item.component";
+
+
+
 const App = () => {
+  const categories = [
+    {
+      id: 1,
+      title: 'Gifts',
+      imageUrl: ''
+    },
+    {
+      id: 2,
+      title: 'Gifts'
+    },
+    {
+      id: 3,
+      title: 'Gifts'
+    },
+    {
+      id: 4,
+      title: 'Gifts'
+    },
+    {
+      id: 5,
+      title: 'Gifts'
+    },
+  ]
   return (
     <div className='categories-container'>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
+      {categories.map((category) => (
+        <CategoryItem key={category.id} category={category}/>
+      ))}
       </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Jackets</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Sneakers</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Womens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Mens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-    </div>
+    
   );
 };
 
