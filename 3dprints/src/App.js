@@ -1,3 +1,6 @@
+import Directory from './components/directory/directory.component.jsx'
+
+import './App.css'
 const App = () => {
   const categories = [
     {
@@ -5,26 +8,30 @@ const App = () => {
       title: 'books'
     },
     {
-      id: 1,
+      id: 2,
       title: 'books'
     },
     {
-      id: 1,
+      id: 3,
       title: 'books'
     },
     {
-      id: 1,
+      id: 4,
       title: 'books'
     },
     {
-      id: 1,
+      id: 5,
       title: 'books'
     },
   ];
 
-  return (
-
-  );
+ return (
+   <div className='category-container'>
+    
+      <Directory  categories ={categories}/>
+    
+   </div>
+ )
 };
 
 export default App;
