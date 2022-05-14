@@ -1,4 +1,5 @@
-import Directory from './components/directory/directory.component.jsx'
+import CategoryItem from './components/category-item/category-item.component'
+import Directory from './components/directory/directory.component' 
 
 import './App.css'
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
 
  return (
    <div className='category-container'>
-    
+     <CategoryItem/>
       <Directory  categories ={categories}/>
     
    </div>
