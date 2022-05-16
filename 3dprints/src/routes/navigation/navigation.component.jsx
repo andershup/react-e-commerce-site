@@ -1,11 +1,12 @@
+
 import { ReactComponent as Sitelogo } from "../../assets/disc.svg";
 import { Outlet, Link } from "react-router-dom";
-
+import { Fragment } from 'react'
 import './navigation.styles.scss'
 
 const Navigation = () => {
   return (
-    <>
+    <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">
           <Sitelogo className="logo" />
@@ -20,7 +21,7 @@ const Navigation = () => {
         </div>
       </div>
       <Outlet/>
-    </>
+    </Fragment>
   );
 };
 
