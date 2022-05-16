@@ -1,4 +1,3 @@
-
 const Shop = () => {
     <h2>Welcome to my shop</h2>
 }
