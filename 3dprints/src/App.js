@@ -1,37 +1,14 @@
-import CategoryItem from './components/category-item/category-item.component'
-import Directory from './components/directory/directory.component' 
+import { Routes, Route} from "react-router-dom"
+import  Home  from './routes/home/home.component'
 
 import './App.css'
 const App = () => {
-  const categories = [
-    {
-      id: 1,
-      title: 'books'
-    },
-    {
-      id: 2,
-      title: 'books'
-    },
-    {
-      id: 3,
-      title: 'books'
-    },
-    {
-      id: 4,
-      title: 'books'
-    },
-    {
-      id: 5,
-      title: 'books'
-    },
-  ];
+
 
  return (
-   <div className='category-container'>
-     <CategoryItem/>
-      <Directory  categories ={categories}/>
-    
-   </div>
+  <Routes>
+    <Route path="/" index element={<Home />}/>
+  </Routes>
  )
 };
 
