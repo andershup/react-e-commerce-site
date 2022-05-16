@@ -20,22 +20,22 @@ const Home = () => {
     {
       id: 3,
       title: 'XC Wings',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      imageUrl: '/images/paraglider-a.jpg',
     },
     {
       id: 4,
       title: 'Sports Wings',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      imageUrl: '/images/tandem-paraglider.jpg',
     },
     {
       id: 5,
       title: 'Performance Wings',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      imageUrl: '/images/tandem-paraglider.jpg',
     },
     {
       id: 6,
       title: 'Competition Wings',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      imageUrl: '/images/tandem-paraglider.jpg',
     },
   ];
 
