@@ -1,4 +1,4 @@
-import CategoryItem from '../directory/derectory.component'
+import CategoryItem from '../directory/directory.component'
 
 const Directory = (categories) => {
    <div className='category-container'>
