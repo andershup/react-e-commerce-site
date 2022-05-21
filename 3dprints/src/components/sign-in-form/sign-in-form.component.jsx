@@ -1,7 +1,6 @@
 import { useState, useContext } from 'react';
 
-import FormInput from '../form-input/form-input.component';
-
+import FormInput from '../form-input/form-input.compontent'
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import { UserContext } from '../../contexts/user.context';
 
