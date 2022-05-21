@@ -1,15 +1,13 @@
-import { useContext } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+
+import { Routes, Route } from "react-router-dom";
 import Home from './routes/home/home.component'
 import Navigation from './routes/navigation/navigation.component'
 import Shop from './routes/shop/shop.component'
 import Authentication from "./routes/authentication/authentication.component";
-import { UserContext } from "./contexts/user.context";
+
 
 import './App.css'
 const App = () => {
-
-  const { currentUser } = useContext(UserContext);
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
