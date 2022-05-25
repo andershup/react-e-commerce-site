@@ -35,6 +35,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
+        {/* if ifCartOpen and CartDropdown then render CartDropdown */}
         {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
