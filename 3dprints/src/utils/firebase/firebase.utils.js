@@ -16,16 +16,20 @@ import {
    setDoc,
    collection,
    writeBatch,
+   query,
    } from 'firebase/firestore';
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-  projectId: 'crwn-clothing-db-98d4d',
-  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-  messagingSenderId: '626766232035',
-  appId: '1:626766232035:web:506621582dab103a4d08d6',
+  apiKey: "AIzaSyAVkKb7jtjupLlqoHSdXZMiF1unyofvPSY",
+  authDomain: "portfolio-react-site-d4951.firebaseapp.com",
+  projectId: "portfolio-react-site-d4951",
+  storageBucket: "portfolio-react-site-d4951.appspot.com",
+  messagingSenderId: "145535152411",
+  appId: "1:145535152411:web:c588538a6ee7b7ef4b23be"
 };
+
+
 
 const firebaseApp = initializeApp(firebaseConfig);
 
@@ -58,6 +62,20 @@ export const addCollectionAndDocuments = async (
 
   await batch.commit();
   console.log('done');
+};
+
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, 'categories');
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
 };
 
 export const createUserDocumentFromAuth = async (
